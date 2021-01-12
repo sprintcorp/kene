@@ -36,9 +36,9 @@ export default {
                         this.message = data.message;
                         this.login = false;
                         this.loading = false;
-                        if(data.data.user.role == "Retailer"){
-                        this.$router.push({ name: 'dashboard' });
-                        } 
+                        if (data.data.user.role == "Cashier") {
+                            this.$router.push({ name: 'dashboard' });
+                        }
                     }
                 ).catch((error) => {
                     this.loading = false
