@@ -1,4 +1,4 @@
-import { BASE_URL, AUTH_TOKEN, NAME, ID, ROLE, PERMISSIONS, OUTLET} from "./env";
+import { BASE_URL, AUTH_TOKEN, NAME, ID, ROLE, PERMISSIONS, OUTLET } from "./env";
 
 
 export const saveToken = (token) => {
@@ -8,10 +8,10 @@ export const saveToken = (token) => {
 export const saveUser = (user) => {
     // console.log(user.role[0].name);
     console.log(user.role[0].permissions[0].name);
-    window.localStorage.setItem(NAME, user.info.first_name + " " + user.info.last_name);
+    window.localStorage.setItem(NAME, user.businesses[0].name);
     window.localStorage.setItem(ID, user.id);
-    window.localStorage.setItem(ROLE, user.role[0].name);
-    window.localStorage.setItem(PERMISSIONS, user.role[0].permissions[0].name);
+    window.localStorage.setItem(ROLE, user.roles[0].name);
+    console.log(user.roles[0].name)
 };
 
 
